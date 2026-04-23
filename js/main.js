@@ -127,7 +127,8 @@
        Journey Line Animation
        ======================================== */
     const journeyLineMain = document.getElementById('journeyLineMain');
-    const journeyLineBranch = document.getElementById('journeyLineBranch');
+    const journeyLineBranch1 = document.getElementById('journeyLineBranch1');
+    const journeyLineBranch2 = document.getElementById('journeyLineBranch2');
     const journeyStations = document.querySelectorAll('.journey-station');
     let journeyAnimated = false;
     
@@ -137,17 +138,22 @@
             journeyLineMain.style.strokeDasharray = pathLengthMain;
             journeyLineMain.style.strokeDashoffset = pathLengthMain;
         }
-        if (journeyLineBranch) {
-            const pathLengthBranch = journeyLineBranch.getTotalLength();
-            journeyLineBranch.style.strokeDasharray = pathLengthBranch;
-            journeyLineBranch.style.strokeDashoffset = pathLengthBranch;
+        if (journeyLineBranch1) {
+            const pathLengthBranch1 = journeyLineBranch1.getTotalLength();
+            journeyLineBranch1.style.strokeDasharray = pathLengthBranch1;
+            journeyLineBranch1.style.strokeDashoffset = pathLengthBranch1;
+        }
+        if (journeyLineBranch2) {
+            const pathLengthBranch2 = journeyLineBranch2.getTotalLength();
+            journeyLineBranch2.style.strokeDasharray = pathLengthBranch2;
+            journeyLineBranch2.style.strokeDashoffset = pathLengthBranch2;
         }
     }
     
     function animateJourney() {
         if (journeyAnimated) return;
         
-        const triggerEl = journeyLineMain || journeyLineBranch;
+        const triggerEl = journeyLineMain || journeyLineBranch1;
         if (!triggerEl) return;
         
         const rect = triggerEl.getBoundingClientRect();
@@ -156,32 +162,50 @@
         if (rect.top < windowHeight * 0.75) {
             journeyAnimated = true;
             
-            // Animate the main line drawing
+            // Phase 1: Animate main line S1->S2
             if (journeyLineMain) {
                 journeyLineMain.style.strokeDashoffset = '0';
             }
             
-            // Animate stations 1-3 and 5 (main path) sequentially
-            const mainStations = [1, 2, 3, 5];
-            mainStations.forEach((stationNum, index) => {
-                setTimeout(() => {
-                    const station = document.querySelector(`.journey-station[data-station="${stationNum}"]`);
-                    if (station) station.classList.add('active');
-                }, 300 + index * 450);
-            });
-            
-            // Animate branch line after main path reaches station 3
+            // Light up S1
             setTimeout(() => {
-                if (journeyLineBranch) {
-                    journeyLineBranch.style.strokeDashoffset = '0';
+                const s1 = document.querySelector('.journey-station[data-station="1"]');
+                if (s1) s1.classList.add('active');
+            }, 300);
+            
+            // Light up S2 (E-Science)
+            setTimeout(() => {
+                const s2 = document.querySelector('.journey-station[data-station="2"]');
+                if (s2) s2.classList.add('active');
+            }, 900);
+            
+            // Phase 2: Animate S2->S3 (Automation) and S2->S4 (ITP)
+            setTimeout(() => {
+                if (journeyLineBranch1) {
+                    journeyLineBranch1.style.strokeDashoffset = '0';
                 }
-            }, 300 + 2 * 450 + 200);
+            }, 1200);
             
-            // Animate station 4 (branch)
+            // Light up S3 and S4
             setTimeout(() => {
-                const station4 = document.querySelector('.journey-station[data-station="4"]');
-                if (station4) station4.classList.add('active');
-            }, 300 + 2 * 450 + 400);
+                const s3 = document.querySelector('.journey-station[data-station="3"]');
+                if (s3) s3.classList.add('active');
+                const s4 = document.querySelector('.journey-station[data-station="4"]');
+                if (s4) s4.classList.add('active');
+            }, 1800);
+            
+            // Phase 3: Animate S3->S5 and S4->S5 (both to CS)
+            setTimeout(() => {
+                if (journeyLineBranch2) {
+                    journeyLineBranch2.style.strokeDashoffset = '0';
+                }
+            }, 2100);
+            
+            // Light up S5 (CS)
+            setTimeout(() => {
+                const s5 = document.querySelector('.journey-station[data-station="5"]');
+                if (s5) s5.classList.add('active');
+            }, 2700);
         }
     }
     
@@ -300,9 +324,13 @@
             journeyLineMain.style.transition = 'none';
             journeyLineMain.style.strokeDashoffset = '0';
         }
-        if (journeyLineBranch) {
-            journeyLineBranch.style.transition = 'none';
-            journeyLineBranch.style.strokeDashoffset = '0';
+        if (journeyLineBranch1) {
+            journeyLineBranch1.style.transition = 'none';
+            journeyLineBranch1.style.strokeDashoffset = '0';
+        }
+        if (journeyLineBranch2) {
+            journeyLineBranch2.style.transition = 'none';
+            journeyLineBranch2.style.strokeDashoffset = '0';
         }
     }
 

@@ -171,7 +171,7 @@
             <div class="section-header">
                 <h2 class="section-title">
                     <span class="lang-en">The Journey</span>
-                    <span class="lang-zh">传奇之路</span>
+                    <span class="lang-zh">特别的路</span>
                 </h2>
                 <p class="section-subtitle">
                     <span class="lang-en">Four major switches, one relentless pursuit</span>
@@ -180,14 +180,22 @@
             </div>
             <div class="journey-map">
                 <svg class="journey-svg" viewBox="0 0 1000 320" preserveAspectRatio="xMidYMid meet">
-                    <!-- Track line: Public Admin -> E-Science -> Automation -> CS -->
-                    <path class="journey-track" d="M 80 240 C 190 240, 190 80, 300 80 C 410 80, 410 240, 520 240 L 750 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
-                    <!-- Branch: Innovation Mgmt -> CS -->
+                    <!-- Track: Public Admin -> E-Science -->
+                    <path class="journey-track" d="M 80 240 C 190 240, 190 80, 280 80" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Track: E-Science -> Automation -->
+                    <path class="journey-track" d="M 280 80 C 390 80, 390 240, 520 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Track: E-Science -> ITP -->
+                    <path class="journey-track" d="M 280 80 C 480 80, 620 80, 720 80" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Track: Automation -> CS -->
+                    <path class="journey-track" d="M 520 240 L 750 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Track: ITP -> CS -->
                     <path class="journey-track" d="M 720 80 C 790 80, 830 160, 900 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
-                    <!-- Animated main line -->
-                    <path class="journey-line" id="journeyLineMain" d="M 80 240 C 190 240, 190 80, 300 80 C 410 80, 410 240, 520 240 L 750 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"/>
-                    <!-- Animated branch line -->
-                    <path class="journey-line" id="journeyLineBranch" d="M 720 80 C 790 80, 830 160, 900 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="600" stroke-dashoffset="600"/>
+                    <!-- Animated line: Public Admin -> E-Science -> Automation -> CS -->
+                    <path class="journey-line" id="journeyLineMain" d="M 80 240 C 190 240, 190 80, 280 80 C 390 80, 390 240, 520 240 L 750 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"/>
+                    <!-- Animated line: E-Science -> ITP -->
+                    <path class="journey-line" id="journeyLineBranch1" d="M 280 80 C 480 80, 620 80, 720 80" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="600" stroke-dashoffset="600"/>
+                    <!-- Animated line: ITP -> CS -->
+                    <path class="journey-line" id="journeyLineBranch2" d="M 720 80 C 790 80, 830 160, 900 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="600" stroke-dashoffset="600"/>
                     
                     <!-- Station 1: Public Administration -->
                     <g class="journey-station" data-station="1" transform="translate(80, 240)">
@@ -199,7 +207,7 @@
                     </g>
                     
                     <!-- Station 2: E-Science -->
-                    <g class="journey-station" data-station="2" transform="translate(300, 80)">
+                    <g class="journey-station" data-station="2" transform="translate(280, 80)">
                         <circle class="station-outer" cx="0" cy="0" r="28" fill="#8E44AD" opacity="0"/>
                         <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#8E44AD" stroke-width="4" opacity="0"/>
                         <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">E-Science</text>
