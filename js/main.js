@@ -99,7 +99,7 @@
     /* ========================================
        Scroll Reveal Animations
        ======================================== */
-    const revealElements = document.querySelectorAll('.section-header, .about-content, .journey-map, .journey-card, .research-card, .pub-category, .edu-item, .skill-card, .contact-link');
+    const revealElements = document.querySelectorAll('.section-header, .about-content, .journey-map, .journey-card, .research-group, .pub-category, .edu-item, .skill-card, .contact-link');
     
     // Add reveal class to elements
     revealElements.forEach((el, index) => {
@@ -126,37 +126,62 @@
     /* ========================================
        Journey Line Animation
        ======================================== */
-    const journeyLine = document.getElementById('journeyLine');
+    const journeyLineMain = document.getElementById('journeyLineMain');
+    const journeyLineBranch = document.getElementById('journeyLineBranch');
     const journeyStations = document.querySelectorAll('.journey-station');
     let journeyAnimated = false;
     
     function initJourneyAnimation() {
-        if (!journeyLine) return;
-        
-        // Dynamically calculate path length for precise animation
-        const pathLength = journeyLine.getTotalLength();
-        journeyLine.style.strokeDasharray = pathLength;
-        journeyLine.style.strokeDashoffset = pathLength;
+        if (journeyLineMain) {
+            const pathLengthMain = journeyLineMain.getTotalLength();
+            journeyLineMain.style.strokeDasharray = pathLengthMain;
+            journeyLineMain.style.strokeDashoffset = pathLengthMain;
+        }
+        if (journeyLineBranch) {
+            const pathLengthBranch = journeyLineBranch.getTotalLength();
+            journeyLineBranch.style.strokeDasharray = pathLengthBranch;
+            journeyLineBranch.style.strokeDashoffset = pathLengthBranch;
+        }
     }
     
     function animateJourney() {
-        if (!journeyLine || journeyAnimated) return;
+        if (journeyAnimated) return;
         
-        const rect = journeyLine.getBoundingClientRect();
+        const triggerEl = journeyLineMain || journeyLineBranch;
+        if (!triggerEl) return;
+        
+        const rect = triggerEl.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         
         if (rect.top < windowHeight * 0.75) {
             journeyAnimated = true;
             
-            // Animate the line drawing
-            journeyLine.style.strokeDashoffset = '0';
+            // Animate the main line drawing
+            if (journeyLineMain) {
+                journeyLineMain.style.strokeDashoffset = '0';
+            }
             
-            // Animate stations sequentially
-            journeyStations.forEach((station, index) => {
+            // Animate stations 1-3 and 5 (main path) sequentially
+            const mainStations = [1, 2, 3, 5];
+            mainStations.forEach((stationNum, index) => {
                 setTimeout(() => {
-                    station.classList.add('active');
+                    const station = document.querySelector(`.journey-station[data-station="${stationNum}"]`);
+                    if (station) station.classList.add('active');
                 }, 300 + index * 450);
             });
+            
+            // Animate branch line after main path reaches station 3
+            setTimeout(() => {
+                if (journeyLineBranch) {
+                    journeyLineBranch.style.strokeDashoffset = '0';
+                }
+            }, 300 + 2 * 450 + 200);
+            
+            // Animate station 4 (branch)
+            setTimeout(() => {
+                const station4 = document.querySelector('.journey-station[data-station="4"]');
+                if (station4) station4.classList.add('active');
+            }, 300 + 2 * 450 + 400);
         }
     }
     
@@ -212,25 +237,36 @@
     const navLinks = document.querySelectorAll('.nav-link');
     
     function updateActiveNav() {
-        const scrollPos = window.scrollY + 100;
+        const navHeight = navbar.offsetHeight;
+        const scrollPos = window.scrollY + navHeight + 20;
+        
+        let currentSection = null;
         
         sections.forEach(section => {
             const top = section.offsetTop;
             const height = section.offsetHeight;
-            const id = section.getAttribute('id');
             
             if (scrollPos >= top && scrollPos < top + height) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        // If near bottom, highlight last section
+        if (!currentSection && (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+            const lastSection = sections[sections.length - 1];
+            if (lastSection) currentSection = lastSection.getAttribute('id');
+        }
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (currentSection && link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
             }
         });
     }
     
     window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
 
     /* ========================================
        Journey Station Click - Scroll to Card
@@ -238,6 +274,7 @@
     journeyStations.forEach(station => {
         station.addEventListener('click', () => {
             const stationNum = station.getAttribute('data-station');
+            if (stationNum === '5') return; // CS station has no card
             const card = document.querySelector(`.journey-card[data-card="${stationNum}"]`);
             if (card) {
                 card.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -259,9 +296,13 @@
             el.classList.add('visible');
         });
         
-        if (journeyLine) {
-            journeyLine.style.transition = 'none';
-            journeyLine.style.strokeDashoffset = '0';
+        if (journeyLineMain) {
+            journeyLineMain.style.transition = 'none';
+            journeyLineMain.style.strokeDashoffset = '0';
+        }
+        if (journeyLineBranch) {
+            journeyLineBranch.style.transition = 'none';
+            journeyLineBranch.style.strokeDashoffset = '0';
         }
     }
 

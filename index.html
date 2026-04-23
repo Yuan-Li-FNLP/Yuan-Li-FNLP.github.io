@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuan Li | Personal Homepage</title>
-    <meta name="description" content="Yuan Li - Ph.D. Student in Computer Science at Fudan University. Research on LLM Agents, RAG, RL, and Embodied AI.">
+    <meta name="description" content="Yuan Li - M.S. Student in Computer Science at Fudan University. Research on LLM Agents, RAG, RL, and Embodied AI.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,14 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="lang-en">Yuan Li</span>
-                <span class="lang-zh">李源</span>
+                <span class="lang-en">Home</span>
+                <span class="lang-zh">首页</span>
             </a>
             <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">首页</span>
+                </a></li>
                 <li><a href="#about" class="nav-link">
                     <span class="lang-en">About</span>
                     <span class="lang-zh">关于</span>
@@ -46,6 +50,10 @@
                 <li><a href="#education" class="nav-link">
                     <span class="lang-en">Education</span>
                     <span class="lang-zh">教育</span>
+                </a></li>
+                <li><a href="#skills" class="nav-link">
+                    <span class="lang-en">Skills</span>
+                    <span class="lang-zh">技能</span>
                 </a></li>
                 <li><a href="#contact" class="nav-link">
                     <span class="lang-en">Contact</span>
@@ -75,8 +83,8 @@
                     <span class="lang-zh">李源</span>
                 </h1>
                 <p class="hero-title">
-                    <span class="lang-en">Ph.D. Student · Computer Science</span>
-                    <span class="lang-zh">博士研究生 · 计算机科学</span>
+                    <span class="lang-en">M.S. Student · Computer Science</span>
+                    <span class="lang-zh">硕士研究生 · 计算机科学</span>
                 </p>
                 <p class="hero-affiliation">
                     <span class="lang-en">Fudan University</span>
@@ -118,28 +126,28 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-intro lang-en">
-                        I am a Ph.D. student in Computer Science at <strong>Fudan University</strong>, advised by 
+                        I am an M.S. student in Computer Science at <strong>Fudan University</strong>, advised by 
                         <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">Prof. Xipeng Qiu</a>.
                         My research lies at the intersection of <strong>Large Language Models</strong>, 
                         <strong>Retrieval-Augmented Generation</strong>, and <strong>Reinforcement Learning</strong>.
                     </p>
                     <p class="about-intro lang-zh">
-                        我是<strong>复旦大学</strong>计算机学院的博士研究生，导师是
+                        我是<strong>复旦大学</strong>计算机学院的硕士研究生，导师是
                         <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">邱锡鹏教授</a>。
                         我的研究聚焦于<strong>大语言模型</strong>、<strong>检索增强生成</strong>与<strong>强化学习</strong>的交叉领域。
                     </p>
                     <p class="about-body lang-en">
                         Before joining Fudan, I completed my undergraduate studies at <strong>Zhejiang University</strong>, 
-                        Chu Kochen Honors College, majoring in Robotics & Innovation Management (GPA 3.95/4.00, 
-                        ranked 2nd). During my time at ZJU, I was fortunate to work with 
+                        Chu Kochen Honors College, majoring in <strong>Automation (Robotics)</strong> and <strong>Innovation Management</strong> 
+                        as a second degree (GPA 3.95/4.00, ranked 2nd). During my time at ZJU, I was fortunate to work with 
                         <a href="https://person.zju.edu.cn/fgaoaa" target="_blank" rel="noopener">Prof. Fei Gao</a> 
                         on aerial robot swarms and 
                         <a href="https://person.zju.edu.cn/youwang" target="_blank" rel="noopener">Prof. You Wang</a> 
                         on spherical robot control.
                     </p>
                     <p class="about-body lang-zh">
-                        在加入复旦之前，我在<strong>浙江大学竺可桢学院</strong>完成了本科学习，主修机器人与创新管理
-                        （绩点 3.95/4.00，专业第二）。在浙大期间，我有幸跟随
+                        在加入复旦之前，我在<strong>浙江大学竺可桢学院</strong>完成了本科学习，主修<strong>自动化（机器人方向）</strong>，
+                        并辅修<strong>创业管理</strong>第二学位（绩点 3.95/4.00，专业第二）。在浙大期间，我有幸跟随
                         <a href="https://person.zju.edu.cn/fgaoaa" target="_blank" rel="noopener">高飞教授</a>
                         研究空中机器人集群，并跟随
                         <a href="https://person.zju.edu.cn/youwang" target="_blank" rel="noopener">王酉教授</a>
@@ -171,72 +179,61 @@
                 </p>
             </div>
             <div class="journey-map">
-                <svg class="journey-svg" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
-                    <!-- Track line -->
-                    <path class="journey-track" d="M 80 320 Q 200 320 220 200 Q 240 80 360 80 Q 480 80 500 200 Q 520 320 640 320 Q 760 320 780 200 Q 800 80 920 80" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
-                    <!-- Animated line -->
-                    <path class="journey-line" id="journeyLine" d="M 80 320 Q 200 320 220 200 Q 240 80 360 80 Q 480 80 500 200 Q 520 320 640 320 Q 760 320 780 200 Q 800 80 920 80" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"/>
+                <svg class="journey-svg" viewBox="0 0 1000 320" preserveAspectRatio="xMidYMid meet">
+                    <!-- Track line: Public Admin -> E-Science -> Automation -> CS -->
+                    <path class="journey-track" d="M 80 240 C 190 240, 190 80, 300 80 C 410 80, 410 240, 520 240 L 750 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Branch: Innovation Mgmt -> CS -->
+                    <path class="journey-track" d="M 720 80 C 790 80, 830 160, 900 240" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Animated main line -->
+                    <path class="journey-line" id="journeyLineMain" d="M 80 240 C 190 240, 190 80, 300 80 C 410 80, 410 240, 520 240 L 750 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"/>
+                    <!-- Animated branch line -->
+                    <path class="journey-line" id="journeyLineBranch" d="M 720 80 C 790 80, 830 160, 900 240" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="600" stroke-dashoffset="600"/>
                     
                     <!-- Station 1: Public Administration -->
-                    <g class="journey-station" data-station="1" transform="translate(80, 320)">
+                    <g class="journey-station" data-station="1" transform="translate(80, 240)">
                         <circle class="station-outer" cx="0" cy="0" r="28" fill="#E67E22" opacity="0"/>
                         <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#E67E22" stroke-width="4" opacity="0"/>
-                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Public Admin</text>
-                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">行政管理</text>
-                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2020</text>
+                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">Public Admin</text>
+                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">行政管理</text>
+                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="12" opacity="0">ZJU · 2020</text>
                     </g>
                     
                     <!-- Station 2: E-Science -->
-                    <g class="journey-station" data-station="2" transform="translate(360, 80)">
+                    <g class="journey-station" data-station="2" transform="translate(300, 80)">
                         <circle class="station-outer" cx="0" cy="0" r="28" fill="#8E44AD" opacity="0"/>
                         <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#8E44AD" stroke-width="4" opacity="0"/>
-                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">E-Science</text>
-                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">电子科学</text>
-                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2020-2021</text>
+                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">E-Science</text>
+                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">电子科学</text>
+                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="12" opacity="0">ZJU · 2020-2021</text>
                     </g>
                     
-                    <!-- Station 3: Robotics -->
-                    <g class="journey-station" data-station="3" transform="translate(640, 320)">
+                    <!-- Station 3: Automation (Robotics) -->
+                    <g class="journey-station" data-station="3" transform="translate(520, 240)">
                         <circle class="station-outer" cx="0" cy="0" r="28" fill="#27AE60" opacity="0"/>
                         <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#27AE60" stroke-width="4" opacity="0"/>
-                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Robotics</text>
-                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">机器人</text>
-                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2021-2023</text>
+                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">Automation</text>
+                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">自动化</text>
+                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="12" opacity="0">ZJU · 2021-2023</text>
                     </g>
                     
                     <!-- Station 4: Innovation Management -->
-                    <g class="journey-station" data-station="4" transform="translate(920, 80)">
+                    <g class="journey-station" data-station="4" transform="translate(720, 80)">
                         <circle class="station-outer" cx="0" cy="0" r="28" fill="#C0392B" opacity="0"/>
                         <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#C0392B" stroke-width="4" opacity="0"/>
-                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Innovation Mgmt</text>
-                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">创业管理</text>
-                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU ITP · 2022-2024</text>
+                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">Innovation Mgmt</text>
+                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">创业管理</text>
+                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="12" opacity="0">ZJU ITP · 2022-2024</text>
+                    </g>
+                    
+                    <!-- Station 5: Computer Science -->
+                    <g class="journey-station" data-station="5" transform="translate(900, 240)">
+                        <circle class="station-outer" cx="0" cy="0" r="32" fill="#2B5F8A" opacity="0"/>
+                        <circle class="station-inner" cx="0" cy="0" r="16" fill="#fff" stroke="#2B5F8A" stroke-width="4" opacity="0"/>
+                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">Computer Science</text>
+                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="14" font-weight="600" opacity="0">计算机科学</text>
+                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="12" opacity="0">Fudan · 2024–Present</text>
                     </g>
                 </svg>
-                
-                <!-- Station 5: Computer Science (separate, larger) -->
-                <div class="journey-destination">
-                    <div class="destination-line"></div>
-                    <div class="destination-station">
-                        <div class="destination-icon" style="background: #2B5F8A;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        </div>
-                        <div class="destination-content">
-                            <h3 class="destination-title">
-                                <span class="lang-en">Computer Science</span>
-                                <span class="lang-zh">计算机科学</span>
-                            </h3>
-                            <p class="destination-school">Fudan University · 2024–Present</p>
-                            <p class="destination-desc lang-en">
-                                Where the journey converges — exploring the frontiers of intelligence 
-                                in the era of large language models.
-                            </p>
-                            <p class="destination-desc lang-zh">
-                                旅程的交汇点 —— 在大模型时代探索智能的边界。
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <!-- Journey Details Cards -->
@@ -305,55 +302,63 @@
                     <span class="lang-en">Research</span>
                     <span class="lang-zh">研究方向</span>
                 </h2>
-                <p class="section-subtitle">
-                    <span class="lang-en">Advised by <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">Prof. Xipeng Qiu</a> · Fudan NLP Lab</span>
-                    <span class="lang-zh">导师：<a href="https://xpqiu.github.io/" target="_blank" rel="noopener">邱锡鹏教授</a> · 复旦 NLP 实验室</span>
-                </p>
             </div>
             <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
-                    </div>
-                    <h3 class="research-name">
-                        <span class="lang-en">LLM Agents & RAG</span>
-                        <span class="lang-zh">大模型智能体与 RAG</span>
+                <div class="research-group">
+                    <h3 class="research-group-title">
+                        <span class="lang-en">Graduate · Fudan University</span>
+                        <span class="lang-zh">研究生 · 复旦大学</span>
                     </h3>
-                    <p class="research-desc lang-en">
-                        Retrieval-Augmented Generation systems with reinforcement learning training. 
-                        Multi-tool agentic retrieval, process supervision, and knowledge graph enhancement.
-                    </p>
-                    <p class="research-desc lang-zh">
-                        基于强化学习训练的检索增强生成系统。多工具智能体检索、过程监督与知识图谱增强。
-                    </p>
-                    <div class="research-tags">
-                        <span class="tag">RAG</span>
-                        <span class="tag">RL</span>
-                        <span class="tag">Tool Learning</span>
-                        <span class="tag">Knowledge Graph</span>
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                        </div>
+                        <h3 class="research-name">
+                            <span class="lang-en">LLM Agents & RL</span>
+                            <span class="lang-zh">大模型智能体与强化学习</span>
+                        </h3>
+                        <p class="research-desc lang-en">
+                            Retrieval-Augmented Generation systems with reinforcement learning training. 
+                            Multi-tool agentic retrieval, process supervision, and knowledge graph enhancement.
+                        </p>
+                        <p class="research-desc lang-zh">
+                            基于强化学习训练的检索增强生成系统。多工具智能体检索、过程监督与知识图谱增强。
+                        </p>
+                        <div class="research-tags">
+                            <span class="tag">RAG</span>
+                            <span class="tag">RL</span>
+                            <span class="tag">Tool Learning</span>
+                            <span class="tag">Knowledge Graph</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="research-card">
-                    <div class="research-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                    </div>
-                    <h3 class="research-name">
-                        <span class="lang-en">Embodied AI</span>
-                        <span class="lang-zh">具身智能</span>
+                <div class="research-group">
+                    <h3 class="research-group-title">
+                        <span class="lang-en">Undergraduate · Zhejiang University</span>
+                        <span class="lang-zh">本科 · 浙江大学</span>
                     </h3>
-                    <p class="research-desc lang-en">
-                        Aerial robot trajectory planning and localization optimization. 
-                        Aerobatic flight generation, vision-based swarm coordination.
-                    </p>
-                    <p class="research-desc lang-zh">
-                        空中机器人轨迹规划与定位优化。特技飞行生成、基于视觉的集群协同。
-                    </p>
-                    <div class="research-tags">
-                        <span class="tag">Drone</span>
-                        <span class="tag">Trajectory Planning</span>
-                        <span class="tag">Swarm Robotics</span>
-                        <span class="tag">Vision</span>
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3 class="research-name">
+                            <span class="lang-en">Embodied AI</span>
+                            <span class="lang-zh">具身智能</span>
+                        </h3>
+                        <p class="research-desc lang-en">
+                            Aerial robot trajectory planning and localization optimization. 
+                            Aerobatic flight generation, vision-based swarm coordination.
+                        </p>
+                        <p class="research-desc lang-zh">
+                            空中机器人轨迹规划与定位优化。特技飞行生成、基于视觉的集群协同。
+                        </p>
+                        <div class="research-tags">
+                            <span class="tag">Drone</span>
+                            <span class="tag">Trajectory Planning</span>
+                            <span class="tag">Swarm Robotics</span>
+                            <span class="tag">Vision</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -370,60 +375,78 @@
                 </h2>
             </div>
             
-            <div class="pub-category">
-                <h3 class="pub-cat-title">
-                    <span class="lang-en">LLM Agents & Reinforcement Learning</span>
-                    <span class="lang-zh">大模型智能体与强化学习</span>
-                </h3>
-                <div class="pub-list">
-                    <div class="pub-item">
-                        <p class="pub-title">R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">EMNLP 2025 <span class="pub-badge">CCF-B</span> <span class="pub-badge badge-first">First Author</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">MARAG-R1: Beyond Single Retriever via Reinforcement-Learned Multi-Tool Agentic Retrieval</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">Chinese Journal of Electronics <span class="pub-badge">CCF-T1</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">BandPO: Bridging Trust Regions and Ratio Clipping via Probability-Aware Bounds for LLM Reinforcement Learning</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">ICML 2026 (Under Review) <span class="pub-badge">CCF-A</span> <span class="pub-badge badge-first">First Author</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">Efficient KL Divergence Estimation via Truncated Top-K Integration for Large Language Models</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">ACL 2026 <span class="pub-badge">CCF-A</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">FamilyTool: A Multi-hop Personalized Tool Use Benchmark</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">Under Review</p>
+            <div class="pub-container">
+                <div class="pub-category">
+                    <h3 class="pub-cat-title">
+                        <span class="lang-en">LLM Agents & Reinforcement Learning</span>
+                        <span class="lang-zh">大模型智能体与强化学习</span>
+                    </h3>
+                    <div class="pub-list">
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2505.23794" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">EMNLP 2025 <span class="pub-badge">CCF-B</span> <span class="pub-badge badge-first">First Author</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2510.27569" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">MARAG-R1: Beyond Single Retriever via Reinforcement-Learned Multi-Tool Agentic Retrieval</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">Chinese Journal of Electronics <span class="pub-badge">CCF-T1</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2603.04918" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">BandPO: Bridging Trust Regions and Ratio Clipping via Probability-Aware Bounds for LLM Reinforcement Learning</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">ICML 2026 (Under Review) <span class="pub-badge">CCF-A</span> <span class="pub-badge badge-first">First Author</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2602.04417" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">Efficient KL Divergence Estimation via Truncated Top-K Integration for Large Language Models</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">ACL 2026 <span class="pub-badge">CCF-A</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2504.06766" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">FamilyTool: A Multi-hop Personalized Tool Use Benchmark</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">Under Review</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="pub-category">
-                <h3 class="pub-cat-title">
-                    <span class="lang-en">Embodied Intelligence & Robotics</span>
-                    <span class="lang-zh">具身智能与机器人</span>
-                </h3>
-                <div class="pub-list">
-                    <div class="pub-item">
-                        <p class="pub-title">Unlocking Aerobatic Potential of Quadcopters: Autonomous Freestyle Flight Generation and Execution</p>
-                        <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
-                        <p class="pub-venue"><em>Science Robotics</em> <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=27.5</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">FACT: Fast and Active Coordinate Initialization for Vision-Based Drone Swarms</p>
-                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
-                        <p class="pub-venue">IEEE RAL <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=5.3</span> <span class="pub-badge badge-first">First Author</span></p>
-                    </div>
-                    <div class="pub-item">
-                        <p class="pub-title">VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</p>
-                        <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
-                        <p class="pub-venue">ICCV 2025 <span class="pub-badge">CCF-A</span></p>
+                
+                <div class="pub-category">
+                    <h3 class="pub-cat-title">
+                        <span class="lang-en">Embodied Intelligence & Robotics</span>
+                        <span class="lang-zh">具身智能与机器人</span>
+                    </h3>
+                    <div class="pub-list">
+                        <div class="pub-item">
+                            <a href="https://www.science.org/doi/abs/10.1126/scirobotics.adp9905" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">Unlocking Aerobatic Potential of Quadcopters: Autonomous Freestyle Flight Generation and Execution</p>
+                            </a>
+                            <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
+                            <p class="pub-venue"><em>Science Robotics</em> <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=27.5</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2403.13455" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">FACT: Fast and Active Coordinate Initialization for Vision-Based Drone Swarms</p>
+                            </a>
+                            <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                            <p class="pub-venue">IEEE RAL <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=5.3</span> <span class="pub-badge badge-first">First Author</span></p>
+                        </div>
+                        <div class="pub-item">
+                            <a href="https://arxiv.org/abs/2412.18194" target="_blank" rel="noopener" class="pub-title-link">
+                                <p class="pub-title">VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</p>
+                            </a>
+                            <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
+                            <p class="pub-venue">ICCV 2025 <span class="pub-badge">CCF-A</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -464,8 +487,8 @@
                     <div class="edu-period">2020 – 2024</div>
                     <div class="edu-content">
                         <h3 class="edu-degree">
-                            <span class="lang-en">B.Eng. in Robotics & Innovation Management</span>
-                            <span class="lang-zh">机器人 & 创新管理 学士</span>
+                            <span class="lang-en">B.Eng. in Automation (Robotics) & Innovation Management</span>
+                            <span class="lang-zh">自动化（机器人方向）& 创业管理 学士</span>
                         </h3>
                         <p class="edu-school">
                             <a href="http://www.ckc.zju.edu.cn/" target="_blank" rel="noopener">Chu Kochen Honors College, Zhejiang University</a>
