@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuan Li | Personal Homepage</title>
+    <meta name="description" content="Yuan Li - Ph.D. Student in Computer Science at Fudan University. Research on LLM Agents, RAG, RL, and Embodied AI.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Prevent language flash on load
+        (function() {
+            var lang = localStorage.getItem('homepage-lang') || 'en';
+            document.documentElement.lang = lang;
+            document.body && document.body.setAttribute('lang', lang);
+        })();
+    </script>
+</head>
+<body lang="en">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="lang-en">Yuan Li</span>
+                <span class="lang-zh">李源</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">
+                    <span class="lang-en">About</span>
+                    <span class="lang-zh">关于</span>
+                </a></li>
+                <li><a href="#journey" class="nav-link">
+                    <span class="lang-en">Journey</span>
+                    <span class="lang-zh">历程</span>
+                </a></li>
+                <li><a href="#research" class="nav-link">
+                    <span class="lang-en">Research</span>
+                    <span class="lang-zh">研究</span>
+                </a></li>
+                <li><a href="#publications" class="nav-link">
+                    <span class="lang-en">Publications</span>
+                    <span class="lang-zh">论文</span>
+                </a></li>
+                <li><a href="#education" class="nav-link">
+                    <span class="lang-en">Education</span>
+                    <span class="lang-zh">教育</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <span class="lang-en">Contact</span>
+                    <span class="lang-zh">联系</span>
+                </a></li>
+            </ul>
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                <span class="lang-en">中</span>
+                <span class="lang-zh">EN</span>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-photo-wrapper">
+                    <img src="assets/photo.jpg" alt="Yuan Li" class="hero-photo">
+                </div>
+                <h1 class="hero-name">
+                    <span class="lang-en">Yuan Li</span>
+                    <span class="lang-zh">李源</span>
+                </h1>
+                <p class="hero-title">
+                    <span class="lang-en">Ph.D. Student · Computer Science</span>
+                    <span class="lang-zh">博士研究生 · 计算机科学</span>
+                </p>
+                <p class="hero-affiliation">
+                    <span class="lang-en">Fudan University</span>
+                    <span class="lang-zh">复旦大学</span>
+                </p>
+                <div class="hero-links">
+                    <a href="https://scholar.google.com/citations?user=UmKOAF0AAAAJ" target="_blank" rel="noopener" class="hero-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5 12 0Z"/></svg>
+                        <span class="lang-en">Google Scholar</span>
+                        <span class="lang-zh">谷歌学术</span>
+                    </a>
+                    <a href="https://github.com/Yuan-Li-FNLP" target="_blank" rel="noopener" class="hero-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12Z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:liyuan24@m.fudan.edu.cn" class="hero-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">About Me</span>
+                    <span class="lang-zh">关于我</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro lang-en">
+                        I am a Ph.D. student in Computer Science at <strong>Fudan University</strong>, advised by 
+                        <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">Prof. Xipeng Qiu</a>.
+                        My research lies at the intersection of <strong>Large Language Models</strong>, 
+                        <strong>Retrieval-Augmented Generation</strong>, and <strong>Reinforcement Learning</strong>.
+                    </p>
+                    <p class="about-intro lang-zh">
+                        我是<strong>复旦大学</strong>计算机学院的博士研究生，导师是
+                        <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">邱锡鹏教授</a>。
+                        我的研究聚焦于<strong>大语言模型</strong>、<strong>检索增强生成</strong>与<strong>强化学习</strong>的交叉领域。
+                    </p>
+                    <p class="about-body lang-en">
+                        Before joining Fudan, I completed my undergraduate studies at <strong>Zhejiang University</strong>, 
+                        Chu Kochen Honors College, majoring in Robotics & Innovation Management (GPA 3.95/4.00, 
+                        ranked 2nd). During my time at ZJU, I was fortunate to work with 
+                        <a href="https://person.zju.edu.cn/fgaoaa" target="_blank" rel="noopener">Prof. Fei Gao</a> 
+                        on aerial robot swarms and 
+                        <a href="https://person.zju.edu.cn/youwang" target="_blank" rel="noopener">Prof. You Wang</a> 
+                        on spherical robot control.
+                    </p>
+                    <p class="about-body lang-zh">
+                        在加入复旦之前，我在<strong>浙江大学竺可桢学院</strong>完成了本科学习，主修机器人与创新管理
+                        （绩点 3.95/4.00，专业第二）。在浙大期间，我有幸跟随
+                        <a href="https://person.zju.edu.cn/fgaoaa" target="_blank" rel="noopener">高飞教授</a>
+                        研究空中机器人集群，并跟随
+                        <a href="https://person.zju.edu.cn/youwang" target="_blank" rel="noopener">王酉教授</a>
+                        研究球形机器人控制。
+                    </p>
+                    <p class="about-body lang-en">
+                        I am also a <strong>National Level-2 Athlete</strong> in track and field, 
+                        having won the bronze medal in men's high jump at the Shanghai Athletics Championships.
+                    </p>
+                    <p class="about-body lang-zh">
+                        我也是一名<strong>国家二级运动员</strong>（田径项目），曾获上海市田径赛甲组男子跳高铜牌。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey section" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">The Journey</span>
+                    <span class="lang-zh">传奇之路</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="lang-en">Four major switches, one relentless pursuit</span>
+                    <span class="lang-zh">四次跨越，一种执着追求</span>
+                </p>
+            </div>
+            <div class="journey-map">
+                <svg class="journey-svg" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
+                    <!-- Track line -->
+                    <path class="journey-track" d="M 80 320 Q 200 320 220 200 Q 240 80 360 80 Q 480 80 500 200 Q 520 320 640 320 Q 760 320 780 200 Q 800 80 920 80" fill="none" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Animated line -->
+                    <path class="journey-line" id="journeyLine" d="M 80 320 Q 200 320 220 200 Q 240 80 360 80 Q 480 80 500 200 Q 520 320 640 320 Q 760 320 780 200 Q 800 80 920 80" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200"/>
+                    
+                    <!-- Station 1: Public Administration -->
+                    <g class="journey-station" data-station="1" transform="translate(80, 320)">
+                        <circle class="station-outer" cx="0" cy="0" r="28" fill="#E67E22" opacity="0"/>
+                        <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#E67E22" stroke-width="4" opacity="0"/>
+                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Public Admin</text>
+                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">行政管理</text>
+                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2020</text>
+                    </g>
+                    
+                    <!-- Station 2: E-Science -->
+                    <g class="journey-station" data-station="2" transform="translate(360, 80)">
+                        <circle class="station-outer" cx="0" cy="0" r="28" fill="#8E44AD" opacity="0"/>
+                        <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#8E44AD" stroke-width="4" opacity="0"/>
+                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">E-Science</text>
+                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">电子科学</text>
+                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2020-2021</text>
+                    </g>
+                    
+                    <!-- Station 3: Robotics -->
+                    <g class="journey-station" data-station="3" transform="translate(640, 320)">
+                        <circle class="station-outer" cx="0" cy="0" r="28" fill="#27AE60" opacity="0"/>
+                        <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#27AE60" stroke-width="4" opacity="0"/>
+                        <text class="station-label lang-en" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Robotics</text>
+                        <text class="station-label lang-zh" x="0" y="55" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">机器人</text>
+                        <text class="station-sublabel" x="0" y="72" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU · 2021-2023</text>
+                    </g>
+                    
+                    <!-- Station 4: Innovation Management -->
+                    <g class="journey-station" data-station="4" transform="translate(920, 80)">
+                        <circle class="station-outer" cx="0" cy="0" r="28" fill="#C0392B" opacity="0"/>
+                        <circle class="station-inner" cx="0" cy="0" r="14" fill="#fff" stroke="#C0392B" stroke-width="4" opacity="0"/>
+                        <text class="station-label lang-en" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">Innovation Mgmt</text>
+                        <text class="station-label lang-zh" x="0" y="-45" text-anchor="middle" fill="#1d1d1f" font-size="13" font-weight="600" opacity="0">创业管理</text>
+                        <text class="station-sublabel" x="0" y="-28" text-anchor="middle" fill="#86868b" font-size="11" opacity="0">ZJU ITP · 2022-2024</text>
+                    </g>
+                </svg>
+                
+                <!-- Station 5: Computer Science (separate, larger) -->
+                <div class="journey-destination">
+                    <div class="destination-line"></div>
+                    <div class="destination-station">
+                        <div class="destination-icon" style="background: #2B5F8A;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="destination-content">
+                            <h3 class="destination-title">
+                                <span class="lang-en">Computer Science</span>
+                                <span class="lang-zh">计算机科学</span>
+                            </h3>
+                            <p class="destination-school">Fudan University · 2024–Present</p>
+                            <p class="destination-desc lang-en">
+                                Where the journey converges — exploring the frontiers of intelligence 
+                                in the era of large language models.
+                            </p>
+                            <p class="destination-desc lang-zh">
+                                旅程的交汇点 —— 在大模型时代探索智能的边界。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Journey Details Cards -->
+            <div class="journey-cards">
+                <div class="journey-card" data-card="1">
+                    <div class="card-dot" style="background: #E67E22;"></div>
+                    <h3 class="card-title">
+                        <span class="lang-en">Public Administration</span>
+                        <span class="lang-zh">行政管理</span>
+                    </h3>
+                    <p class="card-school">
+                        <a href="http://www.spa.zju.edu.cn/" target="_blank" rel="noopener">School of Public Affairs, Zhejiang University</a>
+                    </p>
+                    <p class="card-body lang-en">Started from the macro perspective of social governance, understanding how public systems shape society.</p>
+                    <p class="card-body lang-zh">从社会治理的宏观视角出发，理解公共系统如何塑造社会。</p>
+                </div>
+                
+                <div class="journey-card" data-card="2">
+                    <div class="card-dot" style="background: #8E44AD;"></div>
+                    <h3 class="card-title">
+                        <span class="lang-en">Electronic Science & Technology</span>
+                        <span class="lang-zh">电子科学与技术</span>
+                    </h3>
+                    <p class="card-school">
+                        <a href="http://www.isee.zju.edu.cn/" target="_blank" rel="noopener">School of Information & Electronic Engineering, ZJU</a>
+                    </p>
+                    <p class="card-body lang-en">Delved into the microscopic world of hardware and signals, building the foundation of engineering thinking.</p>
+                    <p class="card-body lang-zh">深入硬件与信号的微观世界，建立工程思维的基石。</p>
+                </div>
+                
+                <div class="journey-card" data-card="3">
+                    <div class="card-dot" style="background: #27AE60;"></div>
+                    <h3 class="card-title">
+                        <span class="lang-en">Automation (Robotics)</span>
+                        <span class="lang-zh">自动化（机器人方向）</span>
+                    </h3>
+                    <p class="card-school">
+                        <a href="http://www.cse.zju.edu.cn/" target="_blank" rel="noopener">School of Control Science & Engineering, ZJU</a>
+                    </p>
+                    <p class="card-body lang-en">Gave machines the ability to perceive and act. Published in <em>Science Robotics</em> and IEEE RAL.</p>
+                    <p class="card-body lang-zh">赋予机器感知与行动的能力。在 <em>Science Robotics</em> 和 IEEE RAL 发表论文。</p>
+                </div>
+                
+                <div class="journey-card" data-card="4">
+                    <div class="card-dot" style="background: #C0392B;"></div>
+                    <h3 class="card-title">
+                        <span class="lang-en">Innovation Management (ITP)</span>
+                        <span class="lang-zh">创业管理（ITP）</span>
+                    </h3>
+                    <p class="card-school">
+                        <a href="http://www.ckc.zju.edu.cn/" target="_blank" rel="noopener">Chu Kochen Honors College</a> + 
+                        <a href="http://www.som.zju.edu.cn/" target="_blank" rel="noopener">School of Management, ZJU</a>
+                    </p>
+                    <p class="card-body lang-en">Connected technology with society through business thinking. Undergraduate MBA experience.</p>
+                    <p class="card-body lang-zh">用商业思维连接技术与社会。本科 MBA 经历。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Research</span>
+                    <span class="lang-zh">研究方向</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="lang-en">Advised by <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">Prof. Xipeng Qiu</a> · Fudan NLP Lab</span>
+                    <span class="lang-zh">导师：<a href="https://xpqiu.github.io/" target="_blank" rel="noopener">邱锡鹏教授</a> · 复旦 NLP 实验室</span>
+                </p>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                    </div>
+                    <h3 class="research-name">
+                        <span class="lang-en">LLM Agents & RAG</span>
+                        <span class="lang-zh">大模型智能体与 RAG</span>
+                    </h3>
+                    <p class="research-desc lang-en">
+                        Retrieval-Augmented Generation systems with reinforcement learning training. 
+                        Multi-tool agentic retrieval, process supervision, and knowledge graph enhancement.
+                    </p>
+                    <p class="research-desc lang-zh">
+                        基于强化学习训练的检索增强生成系统。多工具智能体检索、过程监督与知识图谱增强。
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">RAG</span>
+                        <span class="tag">RL</span>
+                        <span class="tag">Tool Learning</span>
+                        <span class="tag">Knowledge Graph</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3 class="research-name">
+                        <span class="lang-en">Embodied AI</span>
+                        <span class="lang-zh">具身智能</span>
+                    </h3>
+                    <p class="research-desc lang-en">
+                        Aerial robot trajectory planning and localization optimization. 
+                        Aerobatic flight generation, vision-based swarm coordination.
+                    </p>
+                    <p class="research-desc lang-zh">
+                        空中机器人轨迹规划与定位优化。特技飞行生成、基于视觉的集群协同。
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Drone</span>
+                        <span class="tag">Trajectory Planning</span>
+                        <span class="tag">Swarm Robotics</span>
+                        <span class="tag">Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications section" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Publications</span>
+                    <span class="lang-zh">发表论文</span>
+                </h2>
+            </div>
+            
+            <div class="pub-category">
+                <h3 class="pub-cat-title">
+                    <span class="lang-en">LLM Agents & Reinforcement Learning</span>
+                    <span class="lang-zh">大模型智能体与强化学习</span>
+                </h3>
+                <div class="pub-list">
+                    <div class="pub-item">
+                        <p class="pub-title">R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">EMNLP 2025 <span class="pub-badge">CCF-B</span> <span class="pub-badge badge-first">First Author</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">MARAG-R1: Beyond Single Retriever via Reinforcement-Learned Multi-Tool Agentic Retrieval</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">Chinese Journal of Electronics <span class="pub-badge">CCF-T1</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">BandPO: Bridging Trust Regions and Ratio Clipping via Probability-Aware Bounds for LLM Reinforcement Learning</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">ICML 2026 (Under Review) <span class="pub-badge">CCF-A</span> <span class="pub-badge badge-first">First Author</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">Efficient KL Divergence Estimation via Truncated Top-K Integration for Large Language Models</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">ACL 2026 <span class="pub-badge">CCF-A</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">FamilyTool: A Multi-hop Personalized Tool Use Benchmark</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">Under Review</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pub-category">
+                <h3 class="pub-cat-title">
+                    <span class="lang-en">Embodied Intelligence & Robotics</span>
+                    <span class="lang-zh">具身智能与机器人</span>
+                </h3>
+                <div class="pub-list">
+                    <div class="pub-item">
+                        <p class="pub-title">Unlocking Aerobatic Potential of Quadcopters: Autonomous Freestyle Flight Generation and Execution</p>
+                        <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
+                        <p class="pub-venue"><em>Science Robotics</em> <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=27.5</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">FACT: Fast and Active Coordinate Initialization for Vision-Based Drone Swarms</p>
+                        <p class="pub-authors"><strong>Yuan Li</strong> et al.</p>
+                        <p class="pub-venue">IEEE RAL <span class="pub-badge">JCR Q1</span> <span class="pub-badge">IF=5.3</span> <span class="pub-badge badge-first">First Author</span></p>
+                    </div>
+                    <div class="pub-item">
+                        <p class="pub-title">VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</p>
+                        <p class="pub-authors">Authors including <strong>Yuan Li</strong></p>
+                        <p class="pub-venue">ICCV 2025 <span class="pub-badge">CCF-A</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Education</span>
+                    <span class="lang-zh">教育背景</span>
+                </h2>
+            </div>
+            <div class="edu-timeline">
+                <div class="edu-item">
+                    <div class="edu-period">2024 – 2027</div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">
+                            <span class="lang-en">M.S. in Computer Science</span>
+                            <span class="lang-zh">计算机专业 硕士</span>
+                        </h3>
+                        <p class="edu-school">
+                            <a href="https://cs.fudan.edu.cn/" target="_blank" rel="noopener">School of Computer Science, Fudan University</a>
+                        </p>
+                        <p class="edu-advisor">
+                            <span class="lang-en">Advisor: <a href="https://xpqiu.github.io/" target="_blank" rel="noopener">Prof. Xipeng Qiu</a></span>
+                            <span class="lang-zh">导师：<a href="https://xpqiu.github.io/" target="_blank" rel="noopener">邱锡鹏教授</a></span>
+                        </p>
+                        <p class="edu-detail">
+                            <span class="lang-en">Research: Multi-agent Systems & RL Training · Awards: Qimingxingchen Scholarship</span>
+                            <span class="lang-zh">研究方向：多智能体系统及强化学习训练 · 荣誉：启明星辰奖学金</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-period">2020 – 2024</div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">
+                            <span class="lang-en">B.Eng. in Robotics & Innovation Management</span>
+                            <span class="lang-zh">机器人 & 创新管理 学士</span>
+                        </h3>
+                        <p class="edu-school">
+                            <a href="http://www.ckc.zju.edu.cn/" target="_blank" rel="noopener">Chu Kochen Honors College, Zhejiang University</a>
+                        </p>
+                        <p class="edu-detail">
+                            <span class="lang-en">GPA: 3.95/4.00 (Ranked 2nd) · Honors: National/Provincial/University Scholarships, Top Ten Student</span>
+                            <span class="lang-zh">绩点：3.95/4.00（专业第二）· 荣誉：国家/省政府/校级奖学金、院级十佳大学生、中国光谷奖学金</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Skills & Strengths</span>
+                    <span class="lang-zh">技能与特长</span>
+                </h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3 class="skill-title">
+                        <span class="lang-en">Rapid Learning</span>
+                        <span class="lang-zh">快速学习</span>
+                    </h3>
+                    <p class="skill-desc lang-en">3 major switches in undergrad, plus a second degree. Adapted and excelled in every new field.</p>
+                    <p class="skill-desc lang-zh">本科三次转专业，辅修第二学位。在每个新领域都能快速适应并脱颖而出。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📐</div>
+                    <h3 class="skill-title">
+                        <span class="lang-en">Mathematical Foundation</span>
+                        <span class="lang-zh">数学功底</span>
+                    </h3>
+                    <p class="skill-desc lang-en">Provincial Math Olympiad 1st Prize (11th). All math courses A. Expert in SDP & exponential cone optimization.</p>
+                    <p class="skill-desc lang-zh">高中省数学竞赛一等奖（第11名）。本科数学课程全A。精通SDP紧松弛与指数锥优化建模。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">
+                        <span class="lang-en">Full-Stack Development</span>
+                        <span class="lang-zh">全栈开发</span>
+                    </h3>
+                    <p class="skill-desc lang-en">Built the Fudan Foreign Languages RAG system from scratch — product design, business, and full-stack dev.</p>
+                    <p class="skill-desc lang-zh">独立完成复旦大学外文学院RAG企业应用——业务对接、产品策划、全栈开发。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3 class="skill-title">
+                        <span class="lang-en">Team Leadership</span>
+                        <span class="lang-zh">团队领导</span>
+                    </h3>
+                    <p class="skill-desc lang-en">Built a 30-person team from 0 to 1. Won the 1st Prize in the national "Challenge Cup" competition.</p>
+                    <p class="skill-desc lang-zh">独立组建30余人团队，从0到1完成商业路演。获"挑战杯"全国大学生课外学术科技作品竞赛一等奖。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Get in Touch</span>
+                    <span class="lang-zh">联系我</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="lang-en">Open to collaborations and discussions</span>
+                    <span class="lang-zh">欢迎合作与交流</span>
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-links">
+                    <a href="mailto:liyuan24@m.fudan.edu.cn" class="contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">liyuan24@m.fudan.edu.cn</span>
+                        </div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UmKOAF0AAAAJ" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5 12 0Z"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">
+                                <span class="lang-en">Google Scholar</span>
+                                <span class="lang-zh">谷歌学术</span>
+                            </span>
+                            <span class="contact-value">Yuan Li</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Yuan-Li-FNLP" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12Z"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@Yuan-Li-FNLP</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="lang-en">© 2025 Yuan Li. Built with precision and care.</span>
+                <span class="lang-zh">© 2025 李源. 精心打造。</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
